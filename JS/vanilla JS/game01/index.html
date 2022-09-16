@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            z-index: 100;
+            background-color: aqua;
+        }
+
+        #content{
+            
+            width:800px;
+            height: 600px;
+            margin:0 auto;
+            margin-top: 80px;
+            background-image: url("img/sky.jpg");
+            
+            font-size:1.5em;
+        }
+
+        #bird{
+            display: none;
+        }
+        .cover{
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            text-align: center;
+        }
+        .cover >p{
+            padding-top: 300px;
+        }
+        #scoreboard{
+            margin:0 auto;
+            position: absolute;
+            color:white;
+        }
+        #scoreboard > span{
+            padding: 10px;
+        }
+        .gameover{
+            display: none;
+        }
+        .instruction{
+            width:800px;
+            margin:0 auto;
+            padding: 10px;
+            
+        }
+        .instruction > img{
+            width:30px;
+        }
+
+    </style>
+</head>
+<body>
+    <img id="bird" width="100" height="100" src="img/bird.gif" >
+    <div id="content">
+        <div id = "scoreboard">
+            <span>♥ : <i id="life">5</i></span>
+            <span>점수: <i id="score">0</i></span>
+        </div>
+        <div class= "cover" id="cover"><p>스페이스를 눌러 게임 시작</p></div>
+        <div class= "cover gameover" id="gameover"><p>게임오버<br>스페이스로 재시작</p></div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="instruction">
+        <h3>게임 방법</h3>
+        <img src="img/bird.gif"> 당신의 새를 조종해서 멀리 날아갑시다. space 를 누르면 상승하고, 누르지 않으면 하강합니다.
+        <br>
+        <img src="img/thunder.png"> 닿으면 하트가 1개 줄어드는 장애물입니다.<br>
+        <img src="img/feildheart.png"> 닿으면 하트가 1개 상승합니다. 하트가 0개가 되면 게임오버<br>
+        <img src="img/diamond.png"> 닿으면 점수가 100점 상승합니다. 많이 모아서 고득점을 노리자<br>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

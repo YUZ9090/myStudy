@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type'text/css' href='../../css/style.css'>
+</head>
+<body>
+    <h1 >게시물보기</h1>
+    <table width="100%" class="detail" border="1">
+        <tr>
+            <th>글번호</th>
+            <td><%=article.no%></td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td><%=article.title%></td>
+        </tr>
+        <tr>
+            <th>글쓴이</th>
+            <td><%=article.writer  %></td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td class="article"><%=article.article  %></td>
+        </tr>
+    </table>
+    <a href="/board">뒤로</a>
+    <a href="/board/edit/<%=article.no%>">글수정</a>
+    <a href="/board/delete/<%=article.no%>">글삭제</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+#wrap{
+	width:1000px;
+	margin: 10px auto;
+}
+#header{
+	padding:20px;
+	background-color: #ffeeee;
+}
+
+
+#container{
+}
+#nav{
+	width:250px;
+	float:left;
+	padding:10px;
+}
+#content{
+	max-width:710px;
+
+padding:10px;
+float:right;
+margin: 0 auto;
+}
+#container:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#footer{
+padding:10px;
+background-color: #eee;
+}
+
+#main{
+	text-align:center;
+}
+
+.articles{
+	text-align: center;
+	
+}
+.noneA{
+	text-decoration: none;
+}

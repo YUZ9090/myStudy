@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type'text/css' href='css/style.css'>
+</head>
+<body>
+    <h1>게시판</h1>
+    <table  width="100%" border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>글쓴이</th>
+        </tr>
+        <tr>
+            <% articleList.forEach(function(item){%>
+                <tr>
+                    <td><%=item.no%> </td>
+                    <td><a href="board/detail/<%=item.no%>"><%=item.title%></a> </td>
+                    <td><%=item.writer%> </td>
+                </tr>
+                <% })%>
+        </tr>
+
+    </table>
+    <a href="/">뒤로</a>
+    <a href="/board/write">글쓰기</a>
+</body>
+</html> 
